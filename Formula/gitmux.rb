@@ -9,17 +9,17 @@ class Gitmux < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/arl/gitmux/releases/download/v0.7.11/gitmux_v0.7.11_macOS_arm64.tar.gz"
-      sha256 "a5ab58fecd257f90c5593265fb41da0fe83d88ade811921cfb9ae77a90f5c343"
+    if Hardware::CPU.intel?
+      url "https://github.com/arl/gitmux/releases/download/v0.7.11/gitmux_v0.7.11_macOS_amd64.tar.gz"
+      sha256 "b9517808af18d7bbbe4ae79a2456ddce685f6f169f7c7312fe1a099b7cbaf9d8"
 
       def install
         bin.install "gitmux"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/arl/gitmux/releases/download/v0.7.11/gitmux_v0.7.11_macOS_amd64.tar.gz"
-      sha256 "5d00277388c4b764cd52308502bf1ba8791c57b1677cac865a16c93d4e6966bf"
+    if Hardware::CPU.arm?
+      url "https://github.com/arl/gitmux/releases/download/v0.7.11/gitmux_v0.7.11_macOS_arm64.tar.gz"
+      sha256 "b5168a413934064561360b3185fd779d800d3b16d0db15f67955b822a74d2342"
 
       def install
         bin.install "gitmux"
@@ -30,7 +30,7 @@ class Gitmux < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/arl/gitmux/releases/download/v0.7.11/gitmux_v0.7.11_linux_arm64.tar.gz"
-      sha256 "807716fea35965af97102888c7d3c9eabeacbc37993dfb99e04d6b76cea4be5a"
+      sha256 "48253fb1ac848d4074bedfab3f4e127a17de8f650cfb280e2f8aef2a63f95b8c"
 
       def install
         bin.install "gitmux"
@@ -38,7 +38,7 @@ class Gitmux < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/arl/gitmux/releases/download/v0.7.11/gitmux_v0.7.11_linux_amd64.tar.gz"
-      sha256 "f15b124af832a6ebda6ab1f7245623ff752bc9bd164221b5bb9f9644aa07aa0a"
+      sha256 "28946241984047bd1dea426e28106223b200050e7e559dbf9c2c4125e4339e3c"
 
       def install
         bin.install "gitmux"
