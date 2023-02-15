@@ -5,21 +5,21 @@
 class Gitmux < Formula
   desc "Git in your tmux status bar."
   homepage "https://github.com/arl/gitmux"
-  version "0.7.12"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/arl/gitmux/releases/download/v0.7.12/gitmux_v0.7.12_macOS_arm64.tar.gz"
-      sha256 "a5ee933e2c74a43a75048b8c0adda28b5c54de6544871379bd029494260e4ee9"
+    if Hardware::CPU.intel?
+      url "https://github.com/arl/gitmux/releases/download/v0.8.0/gitmux_v0.8.0_macOS_amd64.tar.gz"
+      sha256 "9e69645943eb761fe8ce8e77191f1e54aea2027c4093b6f8cb3cab21ef9b487d"
 
       def install
         bin.install "gitmux"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/arl/gitmux/releases/download/v0.7.12/gitmux_v0.7.12_macOS_amd64.tar.gz"
-      sha256 "b7a1f92a5994598c146f0e30b318ed37fe85dfc30216092034bf222813e70f6b"
+    if Hardware::CPU.arm?
+      url "https://github.com/arl/gitmux/releases/download/v0.8.0/gitmux_v0.8.0_macOS_arm64.tar.gz"
+      sha256 "aa118a76a4d1fc7b4c788ead7884ea592c5efb1a9b4ec809e38529bc6df08a6e"
 
       def install
         bin.install "gitmux"
@@ -29,16 +29,16 @@ class Gitmux < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arl/gitmux/releases/download/v0.7.12/gitmux_v0.7.12_linux_arm64.tar.gz"
-      sha256 "0335b7c7a84fb2889521887af07aa0674393bfcc8cd026fdca1cd08499f8366f"
+      url "https://github.com/arl/gitmux/releases/download/v0.8.0/gitmux_v0.8.0_linux_arm64.tar.gz"
+      sha256 "81a7844c15c747f1c292a55b920d80ff1cde92d0d55a05d74c04b29c839d1d2a"
 
       def install
         bin.install "gitmux"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arl/gitmux/releases/download/v0.7.12/gitmux_v0.7.12_linux_amd64.tar.gz"
-      sha256 "005952e58675aada77989149f06abca972dd4b5c57e45b020b75fb42425cbc61"
+      url "https://github.com/arl/gitmux/releases/download/v0.8.0/gitmux_v0.8.0_linux_amd64.tar.gz"
+      sha256 "c2b1a4b72e521ce6fd3ed039c3dcca2eaab88adead1fb5f6868f37aedcfe9543"
 
       def install
         bin.install "gitmux"
