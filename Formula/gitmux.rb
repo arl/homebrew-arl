@@ -5,21 +5,21 @@
 class Gitmux < Formula
   desc "Git in your tmux status bar."
   homepage "https://github.com/arl/gitmux"
-  version "0.10.2"
+  version "0.10.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/arl/gitmux/releases/download/v0.10.2/gitmux_v0.10.2_macOS_arm64.tar.gz"
-      sha256 "565da49e0e33b8cc77321a2774aadb9b973cfe4d6b6f4ca52be12f7cd9eeb53a"
+      url "https://github.com/arl/gitmux/releases/download/v0.10.3/gitmux_v0.10.3_macOS_arm64.tar.gz"
+      sha256 "879beb8f54fbd9bf396bcee6f2f44e53891f778853ec145c8b73617c6acbf525"
 
       def install
         bin.install "gitmux"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arl/gitmux/releases/download/v0.10.2/gitmux_v0.10.2_macOS_amd64.tar.gz"
-      sha256 "51588e8ce03a021778e5af2e91993dc799ee71a5ac66922939085faa93c9fcd3"
+      url "https://github.com/arl/gitmux/releases/download/v0.10.3/gitmux_v0.10.3_macOS_amd64.tar.gz"
+      sha256 "6cb75a86e4e7c09ed1048b2c9bfaffde190eae95763fb1c9b103ac601f3e84b6"
 
       def install
         bin.install "gitmux"
@@ -28,17 +28,17 @@ class Gitmux < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arl/gitmux/releases/download/v0.10.2/gitmux_v0.10.2_linux_arm64.tar.gz"
-      sha256 "45598d7602e541dba8a34af09daae666c2c63a4db14054f8d9f4a010584e75f9"
+    if Hardware::CPU.intel?
+      url "https://github.com/arl/gitmux/releases/download/v0.10.3/gitmux_v0.10.3_linux_amd64.tar.gz"
+      sha256 "595f60231d9696e897273ae367157f0ca340c076bae033f5d851ce5d17e7df96"
 
       def install
         bin.install "gitmux"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/arl/gitmux/releases/download/v0.10.2/gitmux_v0.10.2_linux_amd64.tar.gz"
-      sha256 "4daffbf7096d6d924ad567bb974cd4fd64c1e8f73179a78cef1873ba924ce34b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/arl/gitmux/releases/download/v0.10.3/gitmux_v0.10.3_linux_arm64.tar.gz"
+      sha256 "00c8630be3c35b3c76f06bf011c51f4e5d270fa67ad95e1914e6f7f7339bfa08"
 
       def install
         bin.install "gitmux"
