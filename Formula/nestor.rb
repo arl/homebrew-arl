@@ -3,7 +3,7 @@ cask "nestor" do
   name "nestor"
   desc "Nestor is a NES/Famicom emulator written in Go."
   homepage "https://github.com/arl/nestor"
-  version "0.0.3"
+  version "0.0.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,7 +15,7 @@ cask "nestor" do
     on_arm do
       url "https://github.com/arl/nestor/releases/download/v#{version}/nestor_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/arl/nestor"
-      sha256 "8691638b7f37a2aa003f33a0e58119271ebbd16ecc6329d5328a6db725b8861d"
+      sha256 "f4b4284912bce2f0758287fc45a2b9193a77f0d14b03f704a2ef377f9d496fbc"
     end
   end
 
